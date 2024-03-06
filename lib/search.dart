@@ -20,7 +20,7 @@ class _SearchState extends State<Search> {
 
   getRecipes(String query) async {
     String url =
-        "https://api.edamam.com/search?q=$query&app_id=ebb6041c&app_key=3c33ad913ab23b8554082bfb5fdd78b5";
+        "https://api.edamam.com/search?q=$query&app_id={API id}&app_key={API Key}";
     Response response = await get(Uri.parse(url));
     Map data = jsonDecode(response.body);
     setState(() {
